@@ -1,6 +1,4 @@
 import React from 'react';
-import Button from './Button_Component';
-import List from './List_Component';
 import Tabs from './Tabs';
 
 // ...
@@ -48,17 +46,16 @@ class Team extends React.Component {
       fetch('https://pokeapi.co/api/v2/pokemon/' + randomNumber)
         .then((res) => res.json())
         .then((res) => {
-          console.log(res);
           const {
             id,
             name,
             sprites: { front_default },
-            stats
+            stats,
+            types
           } = res;
-
-          team.push({ id, name, img: front_default, stats });
+          team.push({ id, name, img: front_default, stats, types });
+          console.log(types[0].type.name)
           if (team.length === 6) {
-            console.log(team);
             this.setState({ pokemons: team });
           }
         });

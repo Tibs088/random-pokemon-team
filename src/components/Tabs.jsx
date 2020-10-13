@@ -2,7 +2,8 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import React from 'react';
 import './common/Tabs.css';
-import OutlinedCard from './Stat_Block_Component';
+import StatsCard from './Stat_Block_Component';
+
 export default (props) => (
   <Tabs>
     <TabList>
@@ -14,7 +15,7 @@ export default (props) => (
         );
       })}
     </TabList>
-    {props.pokemons.map(({ name, id, stats }) => {
+    {props.pokemons.map(({ name, id, stats, types }) => {
       return (
         <TabPanel key={id}>
           {name ? (
@@ -23,7 +24,11 @@ export default (props) => (
                 <h2>{name}</h2>
                 <h2>N. {id}</h2>
               </header>
-              <OutlinedCard stats={stats} />
+              <p>Types:
+                {types[0].type.name}
+                {types[1] ? (types[1].type.name) : <></>}
+              </p>
+              <StatsCard stats={stats} />
             </>
           ) : (
 

@@ -24,7 +24,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function OutlinedCard(props) {
+export default function StatsCard(props) {
   const classes = useStyles();
 
   return (
@@ -36,33 +36,33 @@ export default function OutlinedCard(props) {
         <div id="stats">
           <p>
             {props.stats[0].stat.name}
-                  -----
-                  {props.stats[0].base_stat}
+            -----
+            {props.stats[0].base_stat}
           </p>
           <p>
             {props.stats[1].stat.name}
-                  -----
-                  {props.stats[1].base_stat}
+            -----
+            {props.stats[1].base_stat}
           </p>
           <p>
             {props.stats[2].stat.name}
-                  -----
-                  {props.stats[2].base_stat}
+            -----
+            {props.stats[2].base_stat}
           </p>
           <p>
             {props.stats[3].stat.name}
-                  -----
-                  {props.stats[3].base_stat}
+            -----
+            {props.stats[3].base_stat}
           </p>
           <p>
             {props.stats[4].stat.name}
-                  -----
-                  {props.stats[4].base_stat}
+            -----
+            {props.stats[4].base_stat}
           </p>
           <p>
             {props.stats[5].stat.name}
-                  -----
-                  {props.stats[5].base_stat}
+            -----
+            {props.stats[5].base_stat}
           </p>
         </div>
       </CardContent >
