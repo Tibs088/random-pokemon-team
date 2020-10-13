@@ -8,6 +8,8 @@
 }
 
 .stat-block {
+    background-color: gray;
+    
     text-transform: capitalize;
     text-align: left;
     padding-left: 40px;
