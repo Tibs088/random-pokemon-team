@@ -1,0 +1,15 @@
+.panel-header {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-transform: capitalize;
+
+}
+
+.stat-block {
+    text-transform: capitalize;
+    text-align: left;
+    padding-left: 40px;
+
+}
