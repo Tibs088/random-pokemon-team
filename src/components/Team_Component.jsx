@@ -46,6 +46,7 @@ class Team extends React.Component {
       fetch('https://pokeapi.co/api/v2/pokemon/' + randomNumber)
         .then((res) => res.json())
         .then((res) => {
+          console.log(res);
           const {
             id,
             name,

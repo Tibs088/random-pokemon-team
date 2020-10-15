@@ -3,6 +3,7 @@ import 'react-tabs/style/react-tabs.css';
 import React from 'react';
 import './common/Tabs.css';
 import StatsCard from './Stat_Block_Component';
+import '../styles/types.css'
 
 export default (props) => (
   <Tabs>
@@ -24,10 +25,14 @@ export default (props) => (
                 <h2>{name}</h2>
                 <h2>N. {id}</h2>
               </header>
-              <p>Types:
+              <h4>Types:</h4>
+              <p class={`types ${types[0].type.name}-type`}>
                 {types[0].type.name}
-                {types[1] ? (types[1].type.name) : <></>}
               </p>
+              {types[1] ?
+                <p class={`types ${types[1].type.name}-type`}>
+                  {(types[1].type.name)}
+                </p> : <></>}
               <StatsCard stats={stats} />
             </>
           ) : (
